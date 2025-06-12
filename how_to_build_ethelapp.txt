@@ -1,0 +1,8 @@
+Development (one once):
+
+sudo docker build -t ethel/ethelapp-dev:latest -f Dockerfile.dev .
+
+Production:
+
+sudo docker build -t ethel/ethelapp:latest .
+
