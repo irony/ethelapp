@@ -1,1 +1,3 @@
 # EthelApp
+
+Ethel frontend app
