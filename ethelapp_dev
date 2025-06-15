@@ -10,7 +10,7 @@ fi
 case $1 in
     up)
         echo "Deploying ethelapp dev stack..."
-        docker compose up ethelapp-dev
+        docker compose up -d ethelapp-dev
         ;;
     down)
         echo "Removing ethelapp dev stack..."
