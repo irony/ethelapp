@@ -9,11 +9,11 @@ fi
 # Perform action based on the argument
 case $1 in
     up)
-        echo "Deploying ethelapp dev stack..."
+        echo "Deploying ethelapp dev stack on port 8444 ..."
         docker compose up -d ethelapp-dev
         ;;
     down)
-        echo "Removing ethelapp dev stack..."
+        echo "Removing ethelapp dev stack from port 8444 ..."
         docker compose down ethelapp-dev
         ;;
     *)

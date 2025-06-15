@@ -1,19 +1,15 @@
 services:
   ethelapp-dev:
-    # build from Dockerfile.dev
     build:
       context: .
       dockerfile: Dockerfile.dev
     image: ethel/ethelapp-dev:latest
     working_dir: /app
-    # mount code over the image, but leave node_modules from the image
     volumes:
       - .:/app:delegated
-      # no named volume for node_modules, since the image holds them
+      - /etc/letsencrypt/fullchain.pem:/run/certs/fullchain.pem:ro
+      - /etc/letsencrypt/privkey.pem:/run/certs/privkey.pem:ro
     ports:
-      - "3000:3000"
-    environment:
-      CHOKIDAR_USEPOLLING: "true"
+      - "8444:3000"
     networks:
       - ethel_net
-
