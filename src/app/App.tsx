@@ -1,6 +1,12 @@
-import React from 'react';
-import AppRoutes from './AppRoutes';
+// src/app/App.tsx
+import React from "react";
 
 export default function App() {
-  return <AppRoutes />;
+  console.log("🚀 [App] render");
+  return (
+    <div style={{ padding: 20, fontSize: 32, color: "green" }}>
+      🚀 Hello from App!
+    </div>
+  );
 }
+

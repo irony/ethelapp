@@ -1,0 +1,20 @@
+{
+  "layout": {
+    "openDrawer": "Open menu",
+    "viewAs": "View as…",
+    "userMenu": "User menu",
+    "settings": "Settings",
+    "logout": "Log out",
+    "close": "Close menu",
+    "home": "Home",
+    "chat": "Chat"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "This is your dashboard. Content goes here."
+  },
+  "login": {
+    "title": "Hello World (Login Placeholder)"
+  }
+}
+

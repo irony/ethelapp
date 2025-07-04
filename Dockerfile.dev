@@ -1,14 +1,17 @@
 # Dockerfile.dev
-FROM node:20-slim AS builder
+FROM node:20-slim
 
 WORKDIR /app
+
+# Copy in your package files
 COPY package.json package-lock.json* ./
 
-# install deps at build-time
-RUN npm ci
+# Install everything (dependencies + devDependencies) at build-time
+RUN npm install
 
-# mount your source at runtime, but leave node_modules intact in the image
+# Mount your source over /app, but keep node_modules from the image
 VOLUME ["/app/node_modules"]
 
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+# Start the Vite dev server (with your package.json "dev" script)
+CMD ["npm", "run", "dev"]
 

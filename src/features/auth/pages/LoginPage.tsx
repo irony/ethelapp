@@ -1,9 +1,14 @@
-import React from 'react';
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
-export default function LoginPage() {
+const LoginPage: FC = () => {
+  const { t } = useTranslation();
   return (
-    <div>
-      <h1>Hello World, how are you?</h1>
+    <div className="flex h-full items-center justify-center">
+      <h1 className="text-xl font-semibold">{t('login.title')}</h1>
     </div>
   );
-}
+};
+
+export default LoginPage;
+
