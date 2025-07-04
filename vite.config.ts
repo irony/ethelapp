@@ -10,7 +10,6 @@ export default defineConfig(({ command }) => {
     plugins: [react()],
     resolve: {
       alias: [
-        // Only alias "@/foo" → "src/foo"
         {
           find: /^@\/(.+)$/,
           replacement: path.resolve(__dirname, 'src/$1'),
@@ -26,7 +25,6 @@ export default defineConfig(({ command }) => {
             cert: fs.readFileSync('/run/certs/fullchain.pem'),
           }
         : false,
-      // hmr: { overlay: false }, // disable overlay if you like
     },
   };
 });
