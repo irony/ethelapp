@@ -1,4 +1,5 @@
 // src/main.tsx
+import './i18n';
 console.log("🐣 main.tsx is running");
 
 import React from 'react';
