@@ -1,4 +1,9 @@
-/* Center the login screen placeholder */
+/* 1) Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2) Your custom styles */
 html, body, #root {
   margin: 0;
   height: 100%;
@@ -16,3 +21,4 @@ h1 {
   font-size: 2rem;
   color: #333;
 }
+
