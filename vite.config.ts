@@ -25,6 +25,13 @@ export default defineConfig(({ command }) => {
             cert: fs.readFileSync('/run/certs/fullchain.pem'),
           }
         : false,
+      proxy: {
+        '/app': {
+          target: 'http://ethelappbackend:8000',
+          changeOrigin: true,
+          secure: false,
+        },
+      },
     },
   };
 });
