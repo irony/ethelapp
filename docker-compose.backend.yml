@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  ethelappbackend:
+    image: ethelappbackend:latest
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+    networks:
+      - ethel_net
+
+networks:
+  ethel_net:
+    external: true
+

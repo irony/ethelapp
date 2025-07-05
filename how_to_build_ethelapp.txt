@@ -6,3 +6,7 @@ Production:
 
 sudo docker build -t ethel/ethelapp:latest .
 
+Backend:
+
+sudo docker build -t ethelbackend:latest -f backend/Dockerfile .
+

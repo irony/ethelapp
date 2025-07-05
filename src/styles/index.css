@@ -1,22 +1,32 @@
-/* 1) Tailwind layers */
+/* Tailwind layers */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 2) Your custom styles */
-html, body, #root {
+/* 1) Reset & full-viewport */
+html,
+body,
+#root {
   margin: 0;
+  width: 100%;
   height: 100%;
 }
 
+/* 2) Root background & font only — no more centering */
 #root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #f5f5f5;
   font-family: system-ui, sans-serif;
 }
 
+/* 3) (Optional) Center your *login* page only — wrap it in this container */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* 4) Headings, etc. */
 h1 {
   font-size: 2rem;
   color: #333;

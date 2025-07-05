@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Check if exactly one argument is provided
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 [up|down]"
+    exit 1
+fi
+
+# Perform action based on the argument
+case $1 in
+    up)
+        echo "Deploying ethelapp backend ..."
+        docker stack deploy -c docker-compose.backend.yml ethelappbackend
+        ;;
+    down)
+        echo "Removing ethelapp backend ..."
+        docker stack rm ethelappbackend
+        ;;
+    ps)
+        echo "Listing services in the ethelapp backend stack..."
+        docker stack ps ethelappbackend --no-trunc
+        ;;
+    log)
+	echo "Log for ethelappbackend_$2"
+        docker service logs ethelappbackend_$2
+	;;
+
+    *)
+        echo "Invalid argument: $1"
+        echo "Usage: $0 [up|down|ps|log]"
+        exit 2
+        ;;
+esac
