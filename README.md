@@ -121,7 +121,6 @@ This repository contains both the **frontend** (EthelApp) and **backend** (FastA
    ```bash
    ./ethelapp_prod up
    ```
-   - Listens on **8443** (host) → container **443**  
 3. **Remove**:
    ```bash
    ./ethelapp_prod down
