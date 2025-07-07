@@ -9,11 +9,11 @@ fi
 # Perform action based on the argument
 case $1 in
     up)
-        echo "Deploying ethelapp prod stack on port 8443 ..."
+        echo "Deploying ethelapp prod stack ..."
         docker stack deploy   --resolve-image never   -c docker-compose.yml   ethelapp
         ;;
     down)
-        echo "Removing ethelapp dev stack from port 8443 ..."
+        echo "Removing ethelapp prod stack ..."
         docker stack rm ethelapp
         ;;
     *)
