@@ -15,6 +15,13 @@ spec:
   - host: ethelapp.landgren.io
     http:
       paths:
+      - path: /app
+        pathType: Prefix
+        backend:
+          service:
+            name: ethelappbackend
+            port:
+              number: 8000
       - path: /
         pathType: Prefix
         backend:
